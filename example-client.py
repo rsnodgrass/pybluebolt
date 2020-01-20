@@ -20,45 +20,18 @@ def setup_logger():
     logger.addHandler(handler)
 
 def main():
-    user = os.getenv('BLUEBOLT_USER', None)
-    password = os.getenv('BLUEBOLT_PASSWORD', None)
+    host = os.getenv('BLUEBOLT_HOST', None)
+    port = os.getenv('BLUEBOLT_PORT', None)
 
-    if (user == None) or (password == None):
-        print("ERROR! Must define env variables BLUEBOLT_USER and BLUEBOLT_PASSWORD")
+    if (host == None) or (port == None):
+        print("ERROR! Must define env variables BLUEBOLT_HOST and BLUEBOLT_PORT")
         raise SystemExit
 
     #setup_logger()
     pp = pprint.PrettyPrinter(indent = 2)
  
-    bluebolt = PyBlueBOLT(user, password)
-
+    bluebolt = PyBlueBOLT(host, port)
     print(f"Connected? {bluebolt.is_connected}")
-
-    print("\n--Locations--")
-    locations = bluebolt.locations()
-    pp.pprint( locations )
-
-    print("\n--Location Info--")
-    records = locations['records']
-    location_info = records[0]
-    if location_info:
-        site_id = location_info.get('siteId')
-        print(f"Site id: {site_id}")
-        pp.pprint( bluebolt.location_details(site_id) )
-    
-    for location in locations['records']:
-        site_id = location['siteId']
-        print(f"\n--Devices in Location {site_id}--")
-        devices = bluebolt.devices(site_id)
-        pp.pprint( devices )
-
-        for device in devices['devList']:
-            device_class = device['devClass']
-            device_id = device['devId']
-            
-            print(f"\nOutlet status for device {device_class} / {device_id}")
-            pp.pprint( bluebolt.device(site_id, device_class, device_id) )
-            pp.pprint( bluebolt.outlets(site_id, device_class, device_id) )
     
 if __name__ == "__main__":
     main()

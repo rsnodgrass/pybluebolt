@@ -41,6 +41,6 @@ Requires CV-1 or CV-2 card installed in:
 ## See Also
 
 * [MyBlueBOLT Portal](https://www.mybluebolt.com/)
-* [pybluebolt-service for BlueBOLT cloud support](https://github.com/rsnodgrass/bluebolt-service)
+* [pybluebolt-service for BlueBOLT cloud support](https://github.com/rsnodgrass/pybluebolt-service)
 * [BlueBOLT device proxy web service](https://github.com/Tenflare/bluebolt-api)
 * Home Assistant integration for BlueBOLT devices: [hass-bluebolt](https://github.com/rsnodgrass/hass-bluebolt)
