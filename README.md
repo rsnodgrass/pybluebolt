@@ -1,4 +1,4 @@
-# pybluebolt-tcp - Python interface for BlueBOLT over TCP
+# pybluebolt-tcp: Python interface for BlueBOLT over TCP
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WREP29UDAMB6G)
@@ -41,6 +41,6 @@ Requires CV-1 or CV-2 card installed in:
 ## See Also
 
 * [MyBlueBOLT Portal](https://www.mybluebolt.com/)
-* [BlueBOLT local device webservice proxy](https://github.com/Tenflare/bluebolt-api)
-* [pybluebolt] for BlueBOLT cloud support
-* Home Assistant integration for BlueBOLT devices [hass-bluebolt]
+* [pybluebolt-service for BlueBOLT cloud support](https://github.com/rsnodgrass/bluebolt-service)
+* [BlueBOLT device proxy web service](https://github.com/Tenflare/bluebolt-api)
+* Home Assistant integration for BlueBOLT devices: [hass-bluebolt](https://github.com/rsnodgrass/hass-bluebolt)
