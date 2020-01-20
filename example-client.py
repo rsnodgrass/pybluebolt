@@ -32,22 +32,22 @@ def main():
     bluebolt = PyBlueBOLT(host, port)
     print(f"Connected? {bluebolt.is_connected}")
 
-    print(f"--Status--")
-    print bluebolt.voltage
-    print bluebolt.current
-    
-    print(f"--Outlet Status--")
+    print(f"\n--Status--\n")
+    print(f"Voltage: {bluebolt.voltage}\n")
+    print(f"Current: {bluebolt.current}\n")
+
+    print(f"\n--Outlet Status--\n")
     for outlet in bluebolt.outlets:
         pp.pprint(outlet)
 
     if false:
-        bluebolt.turn_off()
-        bluebolt.turn_on()
+        bluebolt.power_off()
+        bluebolt.power_on()
         bluebolt.toggle_reboot1()
         bluebolt.toggle_reboot2()
         bluebolt.toggle_green()
-        bluebolt.outlet_off(1)
-        bluebolt.outlet_on(1)
+        bluebolt.outlets[1].turn_off()
+        bluebolt.outlets[2].turn_on()
     
 if __name__ == "__main__":
     main()

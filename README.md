@@ -22,7 +22,7 @@ pip3 install pybluebolt-tcp
 bluebolt = PyBlueboltTCP(host, port)
 bluebolt.status
 
-bluebolt.outlets[1].off
+bluebolt.outlets[1].turn_off()
 ```
 
 See also [example-client.py](example-client.py) for a more comprehensive working example.
