@@ -37,6 +37,8 @@ Requires CV-1 or CV-2 card installed in:
 * [Panamax M4320-Pro 8 outlet](https://www.amazon.com/Panamax-M4320-Programmable-Power-Management/dp/B007I4GLQI?tag=rynoshark-20)
 * [Panamax M4000 8 outlet](https://www.amazon.com/Panamax-Outlet-BlueBOLT-Programmable-Management/dp/B00WK646I4?tag=rynoshark-20)
 
+* Panamax SM3-PRO
+
 ## Known Issues
 
 
